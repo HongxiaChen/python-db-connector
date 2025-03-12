@@ -21,17 +21,17 @@ This package provides a reusable Snowflake database connection using Python. It 
 
 Create a `.env` file in the root directory of the project and add the following variables:
 
-```env
+```
 SNOWFLAKE_USER=<your_snowflake_username>
 SNOWFLAKE_PASSWORD=<your_snowflake_password>
 SNOWFLAKE_ACCOUNT=<your_snowflake_account>
 SNOWFLAKE_WAREHOUSE=<your_snowflake_warehouse>
 SNOWFLAKE_DATABASE=<your_snowflake_database>
 SNOWFLAKE_SCHEMA=<your_snowflake_schema>
-´´´
-Usage
+```
+## Usage
 To use the Snowflake database connection package, follow these steps:
 
 1. Import the package:
-´´´from db_connector import SnowflakeConnector ´´´
+```from db_connector import SnowflakeConnector ```
 2. Initialize the connector:
