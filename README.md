@@ -33,8 +33,19 @@ SNOWFLAKE_SCHEMA=<your_snowflake_schema>
 To use the Snowflake database connection package, follow these steps:
 
 1. Import the package:
-```from db_connector import SnowflakeConnector ```
+```
+from db_connector import SnowflakeConnector
+```
 2. Initialize the connector:
+```
+engine = snowflake_connector.get_snowflake_engine()
+print(engine)
+```
+3. Execute queries:
+```
+query = "SELECT * FROM your_table"
+df = pd.read_sql(query, engine)
+```
 
 ## Example
 Here is a complete example of how to use the package:
@@ -46,10 +57,8 @@ connector = SnowflakeConnector()
 
 # Execute a query
 query = "SELECT * FROM your_table"
-result = connector.execute_query(query)
-
-# Print the result
-print(result)
+df = pd.read_sql(query, engine)
+df
 ```
 ## Contact
 For questions or suggestions, contact me: 📧 Email: hongxia.chen06@gmail.com
